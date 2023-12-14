@@ -1,0 +1,197 @@
+@font-face {
+  font-family: "Poppins-Font-Regular";
+  src: url("./assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Font-ExtraBold";
+  src: url("./assets/fonts/Poppins-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Font-Italic";
+  src: url("./assets/fonts/Poppins-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Font-Bold";
+  src: url("./assets/fonts/Poppins-Bold.ttf");
+}
+
+:root {
+  --light-red: hsl(0, 100%, 67%);
+  --purple: hsl(259, 100%, 65%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+body {
+  font-family: Poppins-Font-Regular;
+  background-color: var(--off-white);
+  height: 100vh;
+  max-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.age-calculator-app {
+  background-color: var(--white);
+  border-radius: 3% 3% 20% 3%;
+  padding: 3%;
+  margin: 5%;
+  max-width: 35%;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 5%;
+  color: var(--smokey-grey);
+  font-weight: bold;
+  margin-right: 25%;
+  max-width: 70%;
+}
+
+form label {
+  letter-spacing: 2px;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+form input {
+  font-family: Poppins-Font-ExtraBold;
+  font-size: 32px;
+  max-width: 80%;
+  border-radius: 8px;
+  font-size: larger;
+  border-width: thin;
+  padding: 8%;
+  border: 1px solid var(--light-grey);
+}
+
+form input:focus {
+  outline: none;
+  border: 1px solid var(--purple);
+}
+
+.line-submit-section {
+  display: flex;
+}
+
+.align-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.line-submit-section div {
+  width: 100%;
+}
+
+.submit-button {
+  background-color: var(--purple);
+  border-width: 0;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.submit-button:hover {
+  background: black;
+}
+
+.output {
+  font-family: Poppins-Font-ExtraBold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.output div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+}
+
+.output h2 {
+  color: var(--purple);
+  font-size: 50px;
+  font-weight: 900;
+  font-style: italic;
+  margin: 0;
+  margin-right: 1rem;
+}
+
+.output h1 {
+  margin: 0;
+  font-size: 60px;
+  font-weight: 1500;
+}
+
+.line {
+  border: none;
+  border-top: 1px solid var(--light-grey);
+}
+
+.error_msg {
+  font-family: Poppins-Font-Italic;
+  font-size: 9px;
+  color: red;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1360px) {
+  form {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .attribution {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: smaller;
+  }
+  .age-calculator-app {
+    max-width: 95%;
+  }
+}
+
+#day::-webkit-inner-spin-button,
+#day::-webkit-outer-spin-button,
+#month::-webkit-inner-spin-button,
+#month::-webkit-outer-spin-button,
+#year::-webkit-inner-spin-button,
+#year::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#day::-webkit-clear-button,
+#month::-webkit-clear-button,
+#year::-webkit-clear-button {
+  display: none;
+}
+
+#day,
+#month,
+#year {
+  appearance: none;
+}

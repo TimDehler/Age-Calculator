@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <div class="age-calculator-app">
+      <form>
+        <div id="day_container">
+          <label id="day-label" for="day">DAY</label>
+          <input type="number" id="day" name="day" placeholder="DD" />
+          <h3 class="error_msg" id="day_error"></h3>
+        </div>
+
+        <div id="month_container">
+          <label id="month-label" for="month">MONTH</label>
+          <input type="number" id="month" name="month" placeholder="MM" />
+          <h3 class="error_msg" id="month_error"></h3>
+        </div>
+
+        <div id="year_container">
+          <label id="year-label" for="year">YEAR</label>
+          <input type="number" id="year" name="year" placeholder="YYYY" />
+          <h3 class="error_msg" id="year_error"></h3>
+        </div>
+      </form>
+      <section class="line-submit-section">
+        <div class="align-container">
+          <div class="line"></div>
+        </div>
+
+        <button onclick="submitted()" type="submit" class="submit-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="34"
+            viewBox="0 0 46 44"
+          >
+            <g fill="none" stroke="#FFF" stroke-width="1.5">
+              <!-- Adjust the stroke-width to make the arrow smaller -->
+              <path d="M1 22.019C8.333 21.686 23 25.616 23 44" />
+              <path d="M23 44V0" />
+              <path d="M45 22.019C37.667 21.686 23 25.616 23 44" />
+            </g>
+          </svg>
+        </button>
+      </section>
+      <section class="output">
+        <div>
+          <h2 id="years">- -</h2>
+          <h1>years</h1>
+        </div>
+
+        <div>
+          <h2 id="months">- -</h2>
+          <h1>months</h1>
+        </div>
+
+        <div>
+          <h2 id="days">- -</h2>
+          <h1>days</h1>
+        </div>
+      </section>
+    </div>
+    <div class="attribution">
+      Challenge by&nbsp;
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by&nbsp;<a href="https://github.com/TimDehler">Tim Dehler</a>.
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
