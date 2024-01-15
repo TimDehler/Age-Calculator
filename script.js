@@ -55,6 +55,7 @@ const fillInValues = ({ days, months, years }) => {
 
 function calculateAge(birthDay, birthMonth, birthYear) {
   const currentDate = new Date();
+
   const currentYear = currentDate.getFullYear();
   const currentMonth = currentDate.getMonth() + 1;
   const currentDay = currentDate.getDate();
@@ -67,14 +68,14 @@ function calculateAge(birthDay, birthMonth, birthYear) {
   }
 
   let days = currentDay - birthDay;
+
   if (currentDay < birthDay) {
     const lastDayOfPreviousMonth = new Date(
       currentYear,
       currentMonth - 1,
       0
     ).getDate();
-    days = lastDayOfPreviousMonth - (birthDay - currentDay);
-    months--;
+    days = lastDayOfPreviousMonth - birthDay + currentDay;
   }
 
   if (months < 0) {
