@@ -1,3 +1,9 @@
+# Frontend Mentor Challenge
+
+## Hey Everyone, this is my approach to the Frontend Mentor Age calculator challenge. 
+Below you will find the initial README.md content provided by frontendmentor.io
+
+
 # Frontend Mentor - Age calculator app
 
 ![Design preview for the Age calculator app coding challenge](./design/desktop-preview.jpg)
